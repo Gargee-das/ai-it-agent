@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+            border: none;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #3b82f6;
+            color: white;
+            cursor: pointer;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        h1 {
+            color: #38bdf8;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>AI IT Admin Panel</h1>
+
+    <h2>Chat Command</h2>
+    <form action="/chat" method="post">
+        <input name="message" placeholder="Type like Slack..." required />
+        <button>Send</button>
+    </form>
+
+    <h2>AI Command</h2>
+    <form action="/ai_task" method="post">
+        <input name="query" placeholder="e.g. create user john@company.com" required />
+        <button type="submit">Run AI</button>
+    </form>
+
+    <h2>Create User</h2>
+    <form action="/create_user" method="post">
+        <input name="email" placeholder="Email" required />
+        <button>Create</button>
+    </form>
+
+    <h2>Reset Password</h2>
+    <form action="/reset_password" method="post">
+        <input name="email" placeholder="Email" required />
+        <button>Reset</button>
+    </form>
+
+    <h2>Assign License</h2>
+    <form action="/assign_license" method="post">
+        <input name="email" placeholder="Email" required />
+        <button>Assign</button>
+    </form>
+
+</div>
+</body>
+</html>
